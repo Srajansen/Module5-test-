@@ -1,0 +1,203 @@
+:root {
+    --main-pink: #f5d492; 
+    --main-bluish: #b888ae;   
+    --main-lighter:  #5e815a; 
+    --main-greenish: #0e1f1a;  
+  }
+*{
+    margin : 0px;
+    padding: 0px;
+}  
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+@media (max-width: 75em) {
+    html {
+      font-size: 60%;
+    }
+  }
+  @media (max-width: 61.25em) {
+    html {
+      font-size: 58%;
+    }
+  }
+  @media (max-width: 28.75em) {
+    html {
+      font-size: 55%;
+    }
+  }
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.8rem;
+    color: var(--main-pink);
+    line-height: 1.4;
+    font-weight: 400;
+    width: 100%;
+}
+h1 ,
+h2{
+   text-align: center;
+   font-weight: 700;
+   font-family: 'Raleway', sans-serif;
+}
+h1{
+    font-size: 6rem;
+}
+h2{
+    font-size: 4.2rem;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(--main-pink);
+}
+.nav{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    position: fixed;
+    background-color: var(--main-bluish);
+    top: 0;
+    left: 0;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+    z-index: 10;
+}
+.nav-list{
+    display: flex;
+    margin-right: 2rem;
+}
+@media(max-width: 38.75em){
+    .nav{
+        justify-content: center;
+    }
+    .nav-list{
+        margin: 0 1rem;
+    }
+}
+.nav-list a{
+    display: block;
+    font-size: 2.2rem;
+    padding: 2rem;
+}
+.nav-list a:hover{
+    background: var(--main-lighter);
+}
+.welcome-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-pink);
+    background-color: #000;
+    background-image: linear-gradient(35deg, #3a3d40 0%, var(--main-greenish) 100%);
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+.welcome-section > p{
+    font-size: 4rem;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--main-lighter);
+}
+.projects{
+   text-align: center;
+   padding: 10rem 2rem;
+   background-image: linear-gradient(9deg, #3a3d40 0%, var(--main-lighter) 100%);   
+}
+.projects-section-header{
+    max-width: 645px;
+    margin: 0 auto 6rem auto;
+    color: var(--main-bluish);
+    border-bottom: 0.2rem solid var(--main-pink);
+}
+.projects-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px ,1fr));
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+    width: 100%;
+    max-width: 1280px;
+    display: flex;
+    justify-content: space-around;  
+}
+.project-title{
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 15px;
+    background-image: linear-gradient(65deg, #3a3d40 0%, var(--main-greenish) 100%);
+}
+.project-tile{
+    border-radius: 2px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    background: var(--main-greenish);
+}
+.btn-show-all{
+    font-size: 2rem;
+    font-weight: 500;
+    background: var(--main-bluish);
+    padding: 10px 20px;
+    border-radius: 3px;
+}
+.btn-show-all:hover{
+    background-color: var(--main-bluish);
+}
+.contact-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 80vh;
+    background-image: linear-gradient(65deg, #3a3d40 0%, var(--main-greenish) 100%);
+    padding: 2rem 0;
+}
+.contact-section-header > h2{
+    font-size: 6rem;
+}
+@media(max-width: 600px){
+    .contact-section-header > h2{
+        font-size: 4rem;
+    }
+}
+.contact-section-header > p{
+    font-style: italic;
+    margin-top: 2rem;
+}
+.contact-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 10rem;
+    font-size: 2.4rem;
+    width: 100%
+}
+@media(max-width: 600px){
+    .contact-links{
+        font-size: 1.8rem;
+    }
+}
+.contact-details{
+    text-shadow: 2px 2px 1px #1f1f1f;
+    transition: transform 0.5s  ease-out;
+}
+.contact-details:hover{
+    transform: translateY(8px);
+}
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-image: linear-gradient(65deg, #3a3d40 0%, var(--main-greenish) 100%);
+    padding:2rem;
+    font-weight: 400;
+    border-top: 4px solid var(--main-bluish);
+}
+footer > p{
+    margin: 4rem;
+}
